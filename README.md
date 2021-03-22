@@ -1,2 +1,2 @@
 # MemeDungeon
-meme dungeon yes
+не скоро будет
