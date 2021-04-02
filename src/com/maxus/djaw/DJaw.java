@@ -96,7 +96,7 @@ public class DJaw {
             long timestamp = System.currentTimeMillis() / 1000;
             Logger logger = Logger.getLogger("DJawLogger");
             FileHandler fh;
-
+            final String path = System.getProperty("user.dir");
             try {
                 createDirectory(path+"\\djaw\\logs\\");
                 File tmp = new File(path+"\\djaw\\logs\\", timestamp+"_log.txt");
