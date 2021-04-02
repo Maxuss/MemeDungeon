@@ -1,0 +1,7 @@
+{
+  "_comment": "FOV in buttons, OR use 'sizeX' and 'sizeY' respectively.",
+  "mappingFOVX": 11,
+  "mappingFOVY": 11,
+  "__comment": "Not recommended to set FOV over 7",
+  "normalMode": "windowed"
+}

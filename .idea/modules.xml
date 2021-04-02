@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/jaw.iml" filepath="$PROJECT_DIR$/.idea/jaw.iml" />
-      <module fileurl="file://$PROJECT_DIR$/max/max.iml" filepath="$PROJECT_DIR$/max/max.iml" />
     </modules>
   </component>
 </project>
