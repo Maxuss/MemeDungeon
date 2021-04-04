@@ -1,0 +1,26 @@
+{
+  "fullscreen": true,
+  "rememberUsers": true,
+  "knownUsers": {
+    "1": {
+      "username": "test_maxus",
+      "password": "ABC_HAX",
+      "shownName": "Test Account",
+      "profileName": "test.save"
+    },
+    "2": {
+      "username": "trojan",
+      "password": "hacks",
+      "shownName": "Vulnerability Testing Account",
+      "profileName": "hack.save"
+    },
+    "3": {
+      "username": "keylogger",
+      "password": "hacker_man",
+      "shownName": "Another test account",
+      "profileName": "hack.save"
+    }
+  },
+  "limitPasswordTries": false,
+  "maxPasswordTries": 5,
+}
