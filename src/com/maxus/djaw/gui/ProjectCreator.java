@@ -15,6 +15,7 @@ import java.util.Map;
 
 
 public class ProjectCreator {
+
     private static final String path = System.getProperty("user.dir");
     private static FileWriter file;
     public static void main(String[] args){
@@ -114,7 +115,11 @@ public class ProjectCreator {
         URL iconURL = GUI.class.getResource(pathToIcon);
         ImageIcon icon = new ImageIcon(iconURL);
         DJaw.DJMessage("Loading GUI...", 0);
-
+        try {
+            UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | UnsupportedLookAndFeelException e) {
+            e.printStackTrace();
+        }
         //create frame
         JFrame frame = new JFrame("Create new DJaw project");
         frame.setIconImage(icon.getImage());
@@ -176,7 +181,17 @@ public class ProjectCreator {
         URL iconURL = GUI.class.getResource(pathToIcon);
         ImageIcon icon = new ImageIcon(iconURL);
         DJaw.DJMessage("Loading GUI...", 0);
-
+        try {
+            UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } catch (InstantiationException e) {
+            e.printStackTrace();
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        } catch (UnsupportedLookAndFeelException e) {
+            e.printStackTrace();
+        }
         //create frame
         JFrame frame = new JFrame("Create new DJaw project");
         frame.setIconImage(icon.getImage());
@@ -218,7 +233,17 @@ public class ProjectCreator {
         DJaw.DJawLogger.INFO("Parsing config...", DJaw.log);
         Map map = DJWParser.ConnectData();
         Portfolio data = (Portfolio) map.get(projectName);
-
+        try {
+            UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } catch (InstantiationException e) {
+            e.printStackTrace();
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        } catch (UnsupportedLookAndFeelException e) {
+            e.printStackTrace();
+        }
         String pathToIcon = "/com/maxus/djaw/gui/icon.png";
         URL iconURL = GUI.class.getResource(pathToIcon);
         ImageIcon icon = new ImageIcon(iconURL);
@@ -241,7 +266,28 @@ public class ProjectCreator {
         URL iconURL = GUI.class.getResource(pathToIcon);
         ImageIcon icon = new ImageIcon(iconURL);
         DJaw.DJMessage("Loading GUI...", 0);
-
+        try {
+            UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } catch (InstantiationException e) {
+            e.printStackTrace();
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        } catch (UnsupportedLookAndFeelException e) {
+            e.printStackTrace();
+        }
+        try {
+            UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } catch (InstantiationException e) {
+            e.printStackTrace();
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        } catch (UnsupportedLookAndFeelException e) {
+            e.printStackTrace();
+        }
         //create frame
         JFrame frame = new JFrame("Create new DJaw Class");
         frame.setIconImage(icon.getImage());

@@ -1,0 +1,9 @@
+{
+  "playerName": "Format",
+  "lastLogin": 1,
+  "maxHealth": 999,
+  "defence": 400,
+  "inventory": [
+    "test_item", "another_test_item", "code_format"
+  ]
+}

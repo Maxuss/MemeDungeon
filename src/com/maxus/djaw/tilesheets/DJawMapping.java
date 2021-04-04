@@ -79,6 +79,7 @@ public class DJawMapping {
 
 
         public static JLabel createTileButton(Tile tile) throws NullPointerException {
+
             DJaw.DJMessage("Loading Button Image...", 0);
             try {
                 String paths = Tile.getIMGPath();
@@ -99,6 +100,17 @@ public class DJawMapping {
         }
 
         public static JFrame setupRandomGUIGrid(JFrame mainFrame, String[] tilePaths) throws IOException, NullPointerException {
+            try {
+                UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+            } catch (ClassNotFoundException e) {
+                e.printStackTrace();
+            } catch (InstantiationException e) {
+                e.printStackTrace();
+            } catch (IllegalAccessException e) {
+                e.printStackTrace();
+            } catch (UnsupportedLookAndFeelException e) {
+                e.printStackTrace();
+            }
             DJaw.DJawLogger.INFO("Creating a GUI Map...", DJaw.log);
             JSONObject configData = DJWParser.parseConfig();
             long configFOVX = (long) configData.get("mappingFOVX");
@@ -215,6 +227,17 @@ public class DJawMapping {
         }
     }
     public static JFrame SetupMapGUI(String[] tilepaths) throws IOException {
+        try {
+            UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } catch (InstantiationException e) {
+            e.printStackTrace();
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        } catch (UnsupportedLookAndFeelException e) {
+            e.printStackTrace();
+        }
         DJaw.DJawLogger.INFO("Creating Map GUI...", DJaw.log);
         String pathToIcon = "/com/maxus/djaw/gui/icon.png";
         System.out.println(pathToIcon);
