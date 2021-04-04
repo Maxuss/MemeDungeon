@@ -4,11 +4,11 @@ import com.maxus.djaw.DJaw;
 import com.maxus.djaw.gui.GUI;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
-
 import javax.swing.*;
 import java.awt.*;
 import java.io.FileReader;
 import java.net.URL;
+import java.util.*;
 
 public class SettingsGUI {
     public static final String path = System.getProperty("user.dir");
@@ -83,6 +83,12 @@ public class SettingsGUI {
         frame.getContentPane().add(BorderLayout.NORTH, leftPanel);
         frame.getContentPane().add(BorderLayout.CENTER, centralPanel);
         frame.getContentPane().add(BorderLayout.SOUTH, btm);
+
+        bottom.addActionListener(e -> {
+            SettingMap SM = new SettingMap(lup, lcp, lbp, cup, ccp, cbp,  rup);
+
+        });
+
         String pathToIcon = "/com/maxus/md/logging/icon.png";
         System.out.println(pathToIcon);
         URL iconURL = GUI.class.getResource(pathToIcon);
@@ -123,5 +129,26 @@ public class SettingsGUI {
 
         public JSONObject getKnownUser(String UserNum){ return (JSONObject) knownUsers.get(UserNum); }
         public String[] getAllUserNums(){ return (String[]) knownUsers.keySet().toArray(); }
+    }
+    public static class SettingMap {
+        public static int selectedScM;
+        public static int selectedUser;
+        public static int selectedLang;
+        public static int selectedGraphics;
+        public static int selectedColM;
+        public static String selectedName;
+        public static String selectedCode;
+        public SettingMap(JComboBox lup,JComboBox lcp,JComboBox lbp,JComboBox cup,JComboBox ccp,JTextField cbp, JTextField rup){
+            init(lup, lcp, lbp, cup, ccp, cbp,  rup);
+        }
+        public static void init(JComboBox lup,JComboBox lcp,JComboBox lbp,JComboBox cup,JComboBox ccp,JTextField cbp, JTextField rup){
+            selectedScM = lup.getSelectedIndex();
+            selectedUser =  lcp.getSelectedIndex();
+            selectedLang = lbp.getSelectedIndex();
+            selectedGraphics = cup.getSelectedIndex();
+            selectedColM = ccp.getSelectedIndex();
+            selectedName = cbp.getText();
+            selectedCode = rup.getText();
+        }
     }
 }
